@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    background-color: cadetblue;
+}
+h1,h2{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+.user-detail div{
+    display: inline;
+}
+input{
+    pointer-events: none;
+    user-select: none;
+    border-width: 0px;
+    border-bottom: 1.5px;
+    border-style: solid;
+}
+#toggle-password{
+    margin-left: -25px;
+    cursor: pointer;
+}
+i{
+    font-size: 1.2rem;
+}

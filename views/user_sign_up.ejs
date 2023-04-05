@@ -1,0 +1,33 @@
+<link rel="stylesheet" type="text/css" href="/css/user_sign_up.css">
+<main class="main">
+    <div class="container">
+        <section class="wrapper">
+            <div class="heading">
+                <h1 class="text text-large">Sign Up</h1>
+                <p class="text text-normal">Already Registered? <span><a href="/users/sign-in" class="text text-links">Login</a></span>
+                </p>
+            </div>
+            <form action="/users/create" method="post" name="register" class="form">
+                <div class="input-control">
+                    <label for="name" class="input-label" hidden>Name</label>
+                    <input type="text" name="name" class="input-field" placeholder="Name" required>
+                </div>
+                <div class="input-control">
+                    <label for="email" class="input-label" hidden>Email Address</label>
+                    <input type="email" name="email" class="input-field" placeholder="Email Address" required>
+                </div>
+                <div class="input-control">
+                    <label for="password" class="input-label" hidden>Password</label>
+                    <input type="password" name="password" class="input-field" placeholder="Password" required>
+                </div>
+                <div class="input-control">
+                    <label for="confirmPassword" class="input-label" hidden>Confirm Password</label>
+                    <input type="password" name="confirmPassword" class="input-field" placeholder="Confirm Password" required>
+                </div>
+                <div class="input-control d-flex justify-content-center w-100">
+                    <input type="submit" name="submit" class="input-submit float-right" value="Register" required>
+                </div>
+            </form>
+        </section>
+    </div>
+</main>

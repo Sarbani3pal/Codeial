@@ -1,0 +1,48 @@
+header{
+    width: 100%;
+}
+
+#user {
+    width: 30px;
+}
+
+.navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-collapse form button:hover {
+    border-color: brown;
+    background-color: brown;
+}
+
+.navbar-collapse form button:hover i {
+    color: white;
+}
+
+input[type="search"]:focus {
+    outline: none !important;
+    border-color: brown;
+    box-shadow: 0 0 10px brown;
+}
+
+.nav-item {
+    margin: 0px 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item:hover a i{
+    color: brown;
+}
+
+.nav-item:hover a span{
+    color: brown;
+}
+
+.nav-link i{
+    font-size: 20px;
+    color: white;
+}

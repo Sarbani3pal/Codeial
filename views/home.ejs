@@ -1,0 +1,35 @@
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+
+<main>
+  <section id="feed">
+    <section id="create-post">
+        <h3>Create Post</h3>
+        <form action="/posts/create-post" method="POST">
+            <textarea name="content" id="post-content" cols="75" rows="3" placeholder="Write something here..."></textarea>
+            <input type="submit" value="Post">
+        </form>
+    </section>
+    <section id="post-feed">
+        <%for(post of posts.reverse()){%>
+        <%-include('_post')-%>
+        <%}%>
+    </section>
+  </section>
+  <section id="user-friends">
+    <h4>Friends</h4>
+    <div id="friends-list">
+      <%for(friend of friends){%>
+        <%if(user.id!==friend.id){%>
+        <div class="friend">
+          <div class="profile__pic"></div>
+          <div class="profile__user__name">
+            <a href="/users/profile/<%=friend.id%>">
+              <%=friend.name%>
+            </a>
+          </div>
+        </div>
+        <%}%>
+      <%}%>
+    </div>
+  </section>
+</main>

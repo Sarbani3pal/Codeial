@@ -1,0 +1,53 @@
+main{
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+#feed{
+    width: 40rem;
+    margin: auto;
+}
+#create-post{
+    margin: auto;
+    padding: 1rem;
+}
+#create-post input[type='submit']{
+    display: block;
+}
+#post-feed{
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align:justify;
+}
+.card{
+    margin: 1rem 1rem;
+    border-radius: 1rem;
+}
+#user-friends{
+    width: 20%;
+    box-sizing: border-box;
+}
+#friends-list{
+    width: 100%;
+}
+.friend{
+    margin: 1rem .25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.friend .profile__pic{
+    width: 10%;
+    max-width: 25px;
+    margin: .5rem 2rem .5rem 1rem;
+}
+.friend .profile__pic::after{
+    content: "";
+    display: block;
+    padding: 100%;
+    background-color: black;
+    border-radius: 50%;
+}

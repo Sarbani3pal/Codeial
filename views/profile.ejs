@@ -1,0 +1,35 @@
+<link rel="stylesheet" type="text/css" href="/css/user_profile.css">
+<h1>Welcome <%=profile_user.name%></h1>
+<form action="/users/profile/update" method="POST">
+    <div class="user-detail">
+        <label for="user-name">UserId : </label>
+        <input type="text" name="name" id="user-name" class="input__field" value="<%=profile_user.name%>" readonly>
+        <%if(locals.user.id===profile_user.id){%>
+        <i id="1" class="edit bi bi-pencil-square"></i>
+        <%}%>
+        <i id="1" class="copy bi bi-clipboard"></i>
+    </div>
+    <div class="user-detail">
+        <label for="user-email">Email : </label>
+        <input type="email" name="email" id="user-email" class="input__field" value="<%=profile_user.email%>" readonly>
+        <%if(locals.user.id===profile_user.id){%>
+        <i id="2" class="edit bi bi-pencil-square"></i>
+        <%}%>
+        <i id="2" class="copy bi bi-clipboard"></i>
+    </div>
+    <%if(locals.user.id===profile_user.id){%>
+    <div class="user-detail">
+        <label for="user-password">Password : </label>
+        <input type="password" name="password" id="user-password" class="input__field" value="<%=profile_user.password%>" readonly>
+        <i id="toggle-password" class="bi bi-eye-slash"></i>
+        <%if(locals.user.id===profile_user.id){%>
+        <i id="3" class="edit bi bi-pencil-square"></i>
+        <%}%>
+        <i id="3" class="copy bi bi-clipboard"></i>
+    </div>
+    <%}%>
+    <%if(locals.user.id===profile_user.id){%>
+    <button type="submit" id="save" disabled>Save</button>
+    <%}%>
+</form>
+<script text="text/js" src="/js/user_profile.js"></script>
